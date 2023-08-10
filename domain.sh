@@ -1,7 +1,45 @@
 #!/bin/bash
+Green="\e[92;1m"
+RED="\033[31m"
+YELLOW="\033[33m"
+BLUE="\033[36m"
+FONT="\033[0m"
+GREENBG="\033[42;37m"
+REDBG="\033[41;37m"
+OK="${Green}--->${FONT}"
+ERROR="${RED}[ERROR]${FONT}"
+GRAY="\e[1;30m"
+NC='\e[0m'
 red='\e[1;31m'
 green='\e[0;32m'
+DF='\e[39m'
+Bold='\e[1m'
+Blink='\e[5m'
+yell='\e[33m'
+red='\e[31m'
+green='\e[32m'
+blue='\e[34m'
+PURPLE='\e[35m'
+cyan='\e[36m'
+Lred='\e[91m'
+Lgreen='\e[92m'
+Lyellow='\e[93m'
 NC='\e[0m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+LIGHT='\033[0;37m'
+grenbo="\e[92;1m"
+red() { echo -e "\\033[32;1m${*}\\033[0m"; }
+# Getting
+CHATID="6272457356"
+KEY="6311276701:AAGYfRCalXbO-yaTg6KQQCMSSyWHiMHx_xo"
+export TIME="10"
+export URL="https://api.telegram.org/bot$KEY/sendMessage"
+clear
+#IZIN SCRIPT
+MYIP=$(curl -sS ipv4.icanhazip.com)
+echo -e "\e[32mloading...\e[0m"
+clear
 ns_domain_cloudflare1() {
 apt install jq curl -y
 clear
