@@ -57,6 +57,30 @@ cp /root/domain /etc/xray/domain
 #chmod +x /usr/bin/nza
 #chmod +x /usr/bin/wcc
 
+function notif_addhost() {
+    green "Notif AddHost Tele"
+    sleep 2
+    CHATID="$CHATID"
+KEY="$KEY"
+TIME="$TIME"
+URL="$URL"
+TEXT="
+<code>━━━━━━━━━━━━━━</code>
+<b>   ⚠️ADDHOST NOTIF⚠️</b>
+<b>     Add Domain New</b>
+<code>━━━━━━━━━━━━━━</code>
+<b>IP VPS  :</b> <code>$MYIP </code>
+<b>DOMAIN :</b> <code>$sub</code>
+<code>━━━━━━━━━━━━━━</code>
+<code>NEW ADD DOMAIN</code>
+<code>BY BOT : @xlordeuyy</code>
+"
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+}
+pasang_domain
+pasang_ssl
+notif_addhost
+
 echo -e "Done Record Domain= ${SUB_DOMAIN} For VPS"
 sleep 1
 }
