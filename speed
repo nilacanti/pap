@@ -229,8 +229,8 @@ install_speedtest() {
 print_intro() {
     echo "-------------------- © XLORD VPN 2023 -------------------"
     echo " Version            : $(_green v2023-06-10)"
-    echo " Usage              : wget https://xlordofc.com/speed && chmod +x speed && ./speed")"
-}
+    echo " THANK FOR USING MY SCRIPT "
+    echo " website : xlordstore.com "
 
 # Get System information
 get_system_info() {
