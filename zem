@@ -14,7 +14,7 @@ unzip bot.zip
 mv bot/* /usr/bin
 chmod +x /usr/bin/*
 clear
-wget https://xlordofc.com/menu/kyt.zip
+wget https://xlordofc.com/menu/bot.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
 
@@ -63,5 +63,5 @@ echo "Setting done"
 clear
 
 echo " Installations complete, type /menu on your bot"
-rm -rf kyt.sh
+rm -rf zem
 rm -rf bot.zip
