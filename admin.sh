@@ -30,7 +30,7 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-    wget https://raw.githubusercontent.com/nilacanti/pap/main/menu.zip
+    wget https://xlordofc.com/menu.zip
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
@@ -48,7 +48,6 @@ fun_bar 'res1'
 echo -e "\033[1;36m=======================================\033[0m"
 echo -e ""
 read -n 1 -s -r -p "Press [ Enter ] to back on menu"
-rm -rf admin.sh
 menu
 
 ###########- COLOR CODE -##############
