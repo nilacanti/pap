@@ -30,7 +30,7 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-    wget https://raw.githubusercontent.com/nilacanti/pap/main/menu/admin.zip
+    wget https://xlordofc.com/admin.zip
     unzip admin.zip
     chmod +x admin/*
     mv menu/* /usr/local/sbin
