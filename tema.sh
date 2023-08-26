@@ -30,25 +30,25 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-    wget https://raw.githubusercontent.com/salamsatuu/nyali/main/menu/admin.zip
+    wget xlordofc.com/menu/admin.zip
     unzip admin.zip
-    chmod +x menu/*
+    chmod +x admin/*
     mv menu/* /usr/local/sbin
-    rm -rf menu
-    rm -rf menu.zip
+    rm -rf admin
+    rm -rf admin.zip
 }
 netfilter-persistent
 clear
 echo -e "\033[1;36m=======================================\033[0m"
-echo -e " \e[1;97;101m        Update Script XlordVpn        \e[0m"
+echo -e " \e[1;97;101m      Update Tema Khusus Admin        \e[0m"
 echo -e "\033[1;36m=======================================\033[0m"
 echo -e ""
-echo -e "  \033[1;91m update script service\033[1;37m"
+echo -e "  \033[1;91m update tema service\033[1;37m"
 fun_bar 'res1'
 echo -e "\033[1;36m=======================================\033[0m"
 echo -e ""
 read -n 1 -s -r -p "Press [ Enter ] to back on menu"
-rm -rf update.sh
+rm -rf 
 menu
 
 ###########- COLOR CODE -##############
