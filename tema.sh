@@ -2,7 +2,7 @@
 function menu(){
     clear
     print_install "Memasang Menu Packet"
-    wget https://xlordofc.com/menu/admin.zip
+    wget https://xlordofc.com/admin.zip
     unzip admin.zip
     chmod +x admin/*
     mv menu/* /usr/local/sbin
