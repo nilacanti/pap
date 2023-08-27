@@ -104,6 +104,5 @@ if [ -e /usr/bin/adminbot ]; then
 echo -ne
 else
 install-bot
-fi
-done
+clear
 menu
