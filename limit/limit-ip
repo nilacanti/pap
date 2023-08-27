@@ -6,12 +6,13 @@ KEY="6311276701:AAGYfRCalXbO-yaTg6KQQCMSSyWHiMHx_xo"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 TEXT="
-<code>────────────────────</code>
-<b>⚠️ LIMIT ABIS BANG ⚠️</b>
-<code>────────────────────</code>
+<code>•━━━━━━━━━━━━━━━━━•</code>
+<b>✨ MEMBER MUTLOG ✨</b>
+<code>•━━━━━━━━━━━━━━━━━•</code>
 <code>Username  : </code><code>$user</code>
 <code>Limit Ip    : </code><code>$jum2</code>
-<code>────────────────────</code>
+<code>Note       : Akun Anda Dubanned Dari Server!!</code>
+<code>•━━━━━━━━━━━━━━━━━•</code>
 "
 curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
