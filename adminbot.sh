@@ -105,4 +105,4 @@ echo -ne
 else
 install-bot
 fi
-menu
+done
