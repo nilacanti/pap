@@ -1,10 +1,10 @@
 #!/bin/bash
 # //====================================================
 # //	System Request:Debian 9+/Ubuntu 18.04+/20+
-# //	Author:	Geo Project
+# //	Author:	NDUTZ
 # //	Dscription: Xray Menu Management
-# //	email: admin@geolstore.net
-# //  telegram: https://t.me/tau_samawa
+# //	email: kokmukepo@my.id
+# //  telegram: https://t.me/xlordeuyy
 # //====================================================
 
 # // Root Checking
