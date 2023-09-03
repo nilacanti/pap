@@ -5,8 +5,8 @@ LISTENING_ADDR = '127.0.0.1'
 if sys.argv[1:]:
   LISTENING_PORT = sys.argv[1]
 else:
-  LISTENING_PORT = 700  
-#Pass
+  LISTENING_PORT = 10015  
+#Passwd
 PASS = ''
 
 # CONST
