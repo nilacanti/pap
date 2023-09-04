@@ -6,13 +6,13 @@
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 apt install jq curl -y
-DOMAIN=myvpnstoree.com
+DOMAIN=xlordserver.icu
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-dns=${sub}.myvpnstoree.com
+dns=${sub}.xlordserver.icu
 CF_ID=xlordstoreofc@gmail.com
 CF_KEY=a37077a98a128ab30116a6669b1ede5814cc3
 set -euo pipefail
-IP=$(wget -qO- icanhazip.com);
+IP=$(wget -qO- ifconfig.me/ip);
 echo "Updating DNS for ${dns}..."
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
      -H "X-Auth-Email: ${CF_ID}" \
@@ -43,4 +43,4 @@ echo "$dns" > /etc/xray/domain
 echo "$dns" > /etc/v2ray/domain
 echo "$dns" > /etc/xray/scdomain
 echo "IP=$dns" > /var/lib/kyt/ipvps.conf
-cd
+rm -f /root/cf.sh
