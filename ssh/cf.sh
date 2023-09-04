@@ -5,21 +5,21 @@
 # =========================================
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
-apt install jq curl -y >/dev/null 2>&1
-read -rp "Sub Domain (Contoh: Xlord Store): " -e sub
+apt install jq curl -y
 DOMAIN=myvpnstoree.com
-SUB_DOMAIN=${sub}.myvpnstoree.com
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
+dns=${sub}.myvpnstoree.com
 CF_ID=xlordstoreofc@gmail.com
 CF_KEY=a37077a98a128ab30116a6669b1ede5814cc3
 set -euo pipefail
-IP=$(wget -qO- ifconfig.me/ip);
-echo "Updating DNS for ${SUB_DOMAIN}..."
+IP=$(wget -qO- icanhazip.com);
+echo "Updating DNS for ${dns}..."
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" | jq -r .result[0].id)
 
-RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${SUB_DOMAIN}" \
+RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${dns}" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" | jq -r .result[0].id)
@@ -29,16 +29,18 @@ if [[ "${#RECORD}" -le 10 ]]; then
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
-     --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}' | jq -r .result.id)
+     --data '{"type":"A","name":"'${dns}'","content":"'${IP}'","ttl":120,"proxied":false}' | jq -r .result.id)
 fi
 
 RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
-     --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
-echo "Host : $SUB_DOMAIN"
-echo "IP=" >> /var/lib/kyt/ipvps.conf
-echo $SUB_DOMAIN > /etc/xray/domain
-echo $SUB_DOMAIN > /root/domain
-rm -f /root/cf.sh
+     --data '{"type":"A","name":"'${dns}'","content":"'${IP}'","ttl":120,"proxied":false}')
+echo "$dns" > /root/domain
+echo "$dns" > /root/scdomain
+echo "$dns" > /etc/xray/domain
+echo "$dns" > /etc/v2ray/domain
+echo "$dns" > /etc/xray/scdomain
+echo "IP=$dns" > /var/lib/kyt/ipvps.conf
+cd
