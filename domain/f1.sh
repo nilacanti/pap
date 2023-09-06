@@ -111,3 +111,4 @@ echo -e "Done Record Domain= ${SUB_DOMAIN} For VPS"
 sleep 1
 }
 ns_domain_cloudflare1
+rm -rf /root/f1.sh
