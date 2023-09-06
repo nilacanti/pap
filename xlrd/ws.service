@@ -1,6 +1,6 @@
 [Unit]
-Description=Python Proxy geovpn
-Documentation=https://t.me/tau@samawa
+Description=Python Proxy xlordvpn
+Documentation=https://t.me/xlordeuyy
 After=network.target nss-lookup.target
 
 [Service]
