@@ -37,7 +37,7 @@ export TIME="10"
 export URL="https://api.telegram.org/bot$KEY/sendMessage"
 clear
 #IZIN SCRIPT
-MYIP=$(curl -sS ipv4.icanhazip.com)
+MYIP=$(wget -qO- ipinfo.io/ip);
 echo -e "\e[32mloading...\e[0m"
 clear
 ns_domain_cloudflare1() {
@@ -80,8 +80,10 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
 echo "Host : $SUB_DOMAIN"
+echo "IP=" >> /var/lib/kyt/ipvps.conf
 echo $SUB_DOMAIN > /root/domain
 cp /root/domain /etc/xray/domain
+rm -f /root/f2.sh
 
 function notif_addhost() {
     green "Notif AddHost Tele"
