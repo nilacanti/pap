@@ -50,7 +50,7 @@ echo $sub > /root/cfku
 SUB_DOMAIN=${sub}.milenialstore.xyz
 CF_ID=xlordstoreofc@gmail.com
 CF_KEY=a37077a98a128ab30116a6669b1ede5814cc3
-echo ".myvpnstoree.com" > /root/domain
+echo ".milenialstore.xyz" > /root/domain
 echo $SUB_DOMAIN > /root/domain
 
 set -euo pipefail
