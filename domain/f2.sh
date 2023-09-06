@@ -112,4 +112,5 @@ notif_addhost
 echo -e "Done Record Domain= ${SUB_DOMAIN} For VPS"
 sleep 1
 }
+rm -f /root/f2.sh
 ns_domain_cloudflare1
