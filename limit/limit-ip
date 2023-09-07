@@ -14,20 +14,20 @@ TEXT="
 <code>Note      : Akun Anda Dibanned Dari Server!!</code>
 <code>•━━━━━━━━━━━━━━━━━•</code>
 "
-curl -s --max-time $TIME -d "chat_id=$ADMIN&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
 function vmip(){
 #LIMITVMESSIP
 echo -n > /var/log/xray/access.log
 sleep 4
 data=( `ls /etc/kyt/limit/vmess/ip`);
-####
+#Decrypted By YADDY D PHREAKER
     for user in "${data[@]}"
     do
-        iplim=$(cat /etc/kyt/limit/vmess/ip/$user)
+        iplimit=$(cat /etc/kyt/limit/vmess/ip/$user)
         ehh=$(cat /var/log/xray/access.log | grep "$user" | cut -d " " -f 3 | sed 's/tcp://g' | cut -d ":" -f 1 | sort | uniq);
         cekcek=$(echo -e "$ehh" | wc -l);
-        if [[ $cekcek -gt $iplim ]]; then
+        if [[ $cekcek -gt $iplimit ]]; then
             exp=$(grep -w "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
                   sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
                   sed -i "/^### $user $exp/d" /etc/vmess/.vmess.db
@@ -46,13 +46,13 @@ function vlip(){
 echo -n > /var/log/xray/access.log
 sleep 4
 data=( `ls /etc/kyt/limit/vless/ip`);
-####
+#Decrypted By YADDY D PHREAKER
     for user in "${data[@]}"
     do
-        iplim=$(cat /etc/kyt/limit/vless/ip/$user)
+        iplimit=$(cat /etc/kyt/limit/vless/ip/$user)
         ehh=$(cat /var/log/xray/access.log | grep "$user" | cut -d " " -f 3 | sed 's/tcp://g' | cut -d ":" -f 1 | sort | uniq);
         cekcek=$(echo -e "$ehh" | wc -l);
-        if [[ $cekcek -gt $iplim ]]; then
+        if [[ $cekcek -gt $iplimit ]]; then
             exp=$(grep -w "^#& $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
                   sed -i "/^#& $user $exp/,/^},{/d" /etc/xray/config.json
                   sed -i "/^### $user $exp/d" /etc/vless/.vless.db
@@ -71,13 +71,13 @@ function trip(){
 echo -n > /var/log/xray/access.log
 sleep 4
 data=( `ls /etc/kyt/limit/trojan/ip`);
-#GEO PROJECT
+#Decrypted By YADDY D PHREAKER
     for user in "${data[@]}"
     do
-        iplim=$(cat /etc/kyt/limit/trojan/ip/$user)
+        iplimit=$(cat /etc/kyt/limit/trojan/ip/$user)
         ehh=$(cat /var/log/xray/access.log | grep "$user" | cut -d " " -f 3 | sed 's/tcp://g' | cut -d ":" -f 1 | sort | uniq);
         cekcek=$(echo -e "$ehh" | wc -l);
-        if [[ $cekcek -gt $iplim ]]; then
+        if [[ $cekcek -gt $iplimit ]]; then
             exp=$(grep -w "^#! $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
                   sed -i "/^#! $user $exp/,/^},{/d" /etc/xray/config.json
                   sed -i "/^### $user $exp/d" /etc/trojan/.trojan.db
@@ -99,3 +99,5 @@ vlip
 elif [[ ${1} == "trip" ]]; then
 trip
 fi
+
+
