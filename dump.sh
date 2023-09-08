@@ -4,7 +4,7 @@
 #  Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
 
 echo "$0 $*"  # Print the command line for logging
-. ./path.sh
+. ./install.sh
 
 cmd=run.pl
 do_delta=false
