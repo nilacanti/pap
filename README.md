@@ -21,10 +21,10 @@ Source : 600K Nego
 - Jika mendapatkan error pada servis dalam jangka panjang, bisa restart servis yang dead.
 
 ### INSTALL SCRIPT 1
-<pre><code>wget --no-check-certificate https://xlordofc.com/xpy && chmod +x xpy && ./xpy</code></pre>
+<pre><code>MO NYARI LINK BANG?</code></pre>
 
 ### INSTALL SCRIPT 2
-<pre><code>wget --no-check-certificate https://xlordofc.com/dong && chmod +x dong && ./dong</code></pre>
+<pre><code>LINK NYA GADA WOKWOKWOK</code></pre>
 
 
 ### TESTED ON OS 
