@@ -1121,6 +1121,4 @@ rm -fr udp.sh
 clear
 cd
 sleep 1
-wget https://xlordofc.com/xlrd/opo; bash opo
-rm -fr opo
-clear
+reboot
